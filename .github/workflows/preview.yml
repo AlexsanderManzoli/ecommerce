@@ -10,7 +10,7 @@ jobs:
       postgres:
         image: postgres:12.2
         env:
-          POSTGRES_USER: alexsander
+          POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
           POSTGRES_DB: ecommerce
         ports:
