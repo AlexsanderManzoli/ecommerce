@@ -9,6 +9,8 @@ jobs:
     steps:
       - name: Setup PostgreSQL with Postgis
         uses: huaxk/postgis-action@v1.0.0
+        with:
+          postgresql db: ecommerce
         
       - uses: actions/checkout@v2
       - name: Set up JDK 1.8
