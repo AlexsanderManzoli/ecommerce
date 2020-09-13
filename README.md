@@ -1,2 +1,3 @@
 # ecommerce
-[![Build Status](https://github.com/AlexsanderManzoli/ecommerce/deployments/activity_log?environment=ecommerce-demo2359)
+
+![Heroku](https://heroku-badge.herokuapp.com/?app=ecommerce-demo2359)
