@@ -1,13 +1,12 @@
 package com.ecommece.shop.user
 
-import org.springframework.stereotype.Controller
+import com.ecommece.shop.models.Users
+import com.ecommece.shop.repository.UsersRepository
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class UserController {
+class UsersController(private val usersRepository: UsersRepository) {
     @GetMapping("/")
-    fun index(): String {
-        return "Hello Word"
-    }
+    fun index(): List<Users> = usersRepository.findAll();
 }
