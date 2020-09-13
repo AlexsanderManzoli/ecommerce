@@ -5,19 +5,11 @@ on: [push, pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    
     steps:
-      - name: Postgres client with custom settings
-        # You may pin to the exact commit or the version.
-        # uses: Oxfos/action-postgres-setup@be65c9b48a454ca92582a216197ba4b8b8f5433b
-        uses: Oxfos/action-postgres-setup@v1
-        with:
-          # postgres_user
-          POSTGRES_USER: postgres
-          # postgres_password
-          POSTGRES_PASSWORD: postgres
-          # postgres_db
-          POSTGRES_DB: postgres
+      - name: Setup PostgreSQL with Postgis
+        uses: huaxk/postgis-action@v1.0.0
+        
       - uses: actions/checkout@v2
       - name: Set up JDK 1.8
         uses: actions/setup-java@v1
